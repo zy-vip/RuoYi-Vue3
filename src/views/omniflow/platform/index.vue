@@ -155,15 +155,15 @@ const data = reactive({
   },
   rules: {
     name: [
-      { required: { required: true, message: "平台名称不能为空", trigger: "blur" } },
+      { required: true, message: "平台名称不能为空", trigger: "blur" },
       { min: 2, max: 50, message: "平台名称长度在 2 到 50 个字符", trigger: "blur" },
       { pattern: /^[\u4e00-\u9fa5a-zA-Z0-9\s\-_]+$/, message: "平台名称只能包含中文、字母、数字、空格、横线和下划线", trigger: "blur" }
     ],
     code: [
-      { required: { required: true, message: "平台编码不能为空", trigger: "change" } }
+      { required: true, message: "平台编码不能为空", trigger: "change" }
     ],
     apiConfig: [
-      { required: { required: true, message: "API配置不能为空", trigger: "blur" } },
+      { required: true, message: "API配置不能为空", trigger: "blur" },
       {
         validator: (rule, value, callback) => {
           if (!value) {
@@ -185,7 +185,7 @@ const data = reactive({
       }
     ],
     status: [
-      { required: { required: true, message: "状态不能为空", trigger: "change" } }
+      { required: true, message: "状态不能为空", trigger: "change" }
     ]
   }
 })
